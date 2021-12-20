@@ -1,0 +1,23 @@
+<i class="fa fa-arrow-left fa-4x" aria-hidden="true" (click)="back()"></i>
+<h1 class="position" style="left: 100px">{{ employee?.employee_name }}</h1>
+<label class="switch position" style="right: 420px">
+  <input type="checkbox" placeholder="Enabled" />
+  <span class="slider round"></span>
+</label>
+<button type="submit" class="btn btn-primary position" style="right: 320px">
+  Edit
+</button>
+<button type="submit" class="btn btn-light position" style="right: 150px">
+  Change Password
+</button>
+<button type="submit" class="btn btn-light position" style="right: 30px">
+  Order Wash
+</button>
+<br /><br /><br />
+<p><b>Name :</b> {{employee?.employee_name}}</p>
+<p><b>Mobile Number :</b> {{employee?.contactNumber}}</p>
+<p><b>Status :</b> <label style="color: green;">Active</label></p>
+<p><b>User Created :</b> {{myDate|date:'medium'}}</p>
+<p><b>Email Id :</b> {{employee?.emailId}}</p>
+<p><b>Salary :</b> {{employee?.employee_salary}}</p>
+<p><b>Age :</b> {{employee?.employee_age}}</p>

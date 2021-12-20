@@ -1,0 +1,108 @@
+<h1 style="text-align: center">Create your account</h1>
+<br />
+<form [formGroup]="userSignupForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="form-whole">
+      <div class="form-group col-md-4">
+        <label for="LastName"
+          ><b>Last Name</b><span class="required">*</span></label
+        ><br />
+        <input
+          type="text"
+          placeholder="Enter last name"
+          formControlName="lastName"
+          class="form-control"
+          required
+        />
+        <span
+          *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)"
+          class="required"
+          >enter minimum 2 characters</span
+        >
+      </div>
+      <div class="form-group col-md-4">
+        <label for="firstName"
+          ><b>First Name</b><span class="required">*</span></label
+        ><br />
+        <input
+          type="text"
+          placeholder="Enter first name"
+          formControlName="firstName"
+          class="form-control"
+          required
+        />
+        <span
+          *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)"
+          class="required"
+          >enter minimum 2 characters</span
+        >
+      </div>
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="contactNumber"
+        ><b>Contact number</b><span class="required">*</span></label
+      >
+      <input
+        type="text"
+        placeholder="e.g +32 484766130"
+        formControlName="contactNumber"
+        class="form-control"
+        required
+      />
+      <span
+          *ngIf="contactNumber?.invalid && (contactNumber?.dirty || contactNumber?.touched)"
+          class="required"
+          >Please enter your phone number with country code with '+' sign e.g +32 484766130</span
+        >
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="email"><b>Email ID</b><span class="required">*</span></label>
+      <input
+        type="email"
+        placeholder="e.g abc@gmail.com"
+        formControlName="email"
+        class="form-control"
+        required
+      />
+      <span
+          *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+          class="required"
+          >enter correct email</span
+        >
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="email"><b>Password</b><span class="required">*</span></label>
+      <div class="input-group">
+        <input
+          [type]="fieldTextType ? 'text' : 'password'"
+          class="form-control"
+          placeholder="Enter password"
+          formControlName="password"
+          required
+        />
+        <div class="input-group-append">
+          <span class="input-group-text">
+            <i
+              class="fa fa-eye-slash"
+              [ngClass]="{
+                'fa-eye-slash': !fieldTextType,
+                'fa-eye': fieldTextType
+              }"
+              (click)="toggleFieldTextType()"
+            ></i>
+          </span>
+        </div>
+      </div>
+      <span
+          *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+          class="required"
+          >password should be atleast 6 characters</span
+        >
+    </div>
+    <br />
+    <button class="form-control btn btn-primary" type="submit">SIGN UP</button>
+  </div>
+</form>

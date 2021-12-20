@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+  color: black;
+}
+
+
+table, th , td {  
+  border: 1px solid grey;  
+  border-collapse: collapse;  
+  padding: 5px;  
+  font-size: 22px;  
+}  
+table tr:nth-child(odd) {  
+  background-color: white;  
+}  
+table tr:nth-child(even) {  
+  background-color:white;  
+} 

@@ -1,0 +1,23 @@
+<h1><b>Employee Table</b></h1>
+<p class="text-center" *ngIf="loading">
+    <i class="fa fa-spinner fa-spin"></i>
+</p>
+<hr />
+
+<table border="1" align="center" *ngIf="!loading">
+  <tr>
+    <th>ID</th>
+    <th>AGE</th>
+    <th>NAME</th>
+    <th>SALARY</th>
+    <th>DETAIL</th>
+  </tr>
+
+  <tr *ngFor="let employee of allEmployees; let i=index">
+    <td >{{employee.id}}</td>
+    <td >{{employee.employee_age}}</td>
+    <td >{{employee.employee_name}}</td>
+    <td >{{employee.employee_salary}}</td>
+    <td ><a class='nav-link' (click)="viewDetail(i)" routerLink="/employees/detail">VIEW</a></td>
+  </tr>
+</table>

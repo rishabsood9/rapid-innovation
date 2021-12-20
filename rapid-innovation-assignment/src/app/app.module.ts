@@ -9,8 +9,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { EmployeeTableComponent } from './employee-table/employee-table.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { ErrorComponent } from './error/error.component';
-import { EmployeeDataService } from './Services/employee-data.service';
 import { SignUpGuardService } from './Services/Sign-up-gaurd/signup.guard';
+import { EmployeeDataService } from './Services/Employee-service/employee-data.service';
 
 @NgModule({
   declarations: [AppComponent, SignUpPageComponent, EmployeeTableComponent, EmployeeDetailComponent, ErrorComponent],

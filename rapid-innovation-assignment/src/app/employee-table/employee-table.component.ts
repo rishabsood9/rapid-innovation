@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { delay } from 'rxjs/operators';
 import { Employee } from '../Model/types';
-import { EmployeeDataService } from '../Services/employee-data.service';
+import { EmployeeDataService } from '../Services/Employee-service/employee-data.service';
 
 @Component({
   selector: 'app-employee-table',

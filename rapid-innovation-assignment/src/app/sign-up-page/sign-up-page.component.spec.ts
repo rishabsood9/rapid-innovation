@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 import { SignUpPageComponent } from './sign-up-page.component';
 
@@ -8,7 +9,10 @@ describe('SignUpPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignUpPageComponent ]
+      declarations: [ SignUpPageComponent ],
+      providers: [
+        { provide: Router, useValue: { navigate: () => {} } },
+      ],
     })
     .compileComponents();
   });
